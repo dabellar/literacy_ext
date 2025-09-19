@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- 
+    Name: Darleine Abellard
+    CS 141 SU 2025
+    Reader's Aide Chrome Extension
+    This is the html file for a reading helper chrome extension. It includes the layout and structure for the side panel.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reader's Aide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="side_panel.css">
+    <script defer src="helper.js"></script>
+    <script defer src="speechRecognition.js"></script>
+    <script defer src="content_script.js"></script>
+    <script defer src="side_panel.js" ></script>
+</head>
+<body>
+
+    <header>
+        <div id="header-bucket">
+            <h1>Reader's Aide</h1>
+            <button id="infoBtn">Info</button>
+        </div>
+        <section class="hidden" id="info-tooltip">
+            <h2>How to Use Reader's Aide</h2>
+            <ol>
+                <li>Type a word in the search bar</li>
+                <li>Click "GO!" or press enter to get the definition</li>
+                <li>Click the volume icon to hear the word</li>
+                <li>Click the microphone icon to practice pronouncing the word</li>
+            </ol>
+            <p>Press the "Info" button again to close this and get started!</p>
+        </section>
+    </header>
+
+    <section id="reading-aide">
+        <h2>Define and Speak</h2>
+        <p>Enter a word to get its definition and help to pronounce it.</p>
+        <div id="search-wrapper">
+            <input type="search" id="word-input" placeholder="Enter a word..." />
+            <button id="ra-lookupBtn">GO!</button>
+        </div>
+        <div class="hidden" id="ra-result">
+            <div class="hidden" id="ra-definition-bucket">
+                <!-- <p class="ra-definition"> 
+                    <span>(partOfSpeech.)</span> Definition
+                </p> -->
+            </div>
+            <div class="pronunciation-controls">
+                <button title="Click to hear the word" id="ra-speakBtn"><img id="volume_icon" src="imgs/volume_icon.png" alt="Volume"></button>
+                <button title="Click to practice pronouncing it" id="ra-practiceBtn"><img id="mic_icon" src="imgs/mic_icon.png" alt="Microphone"></button>
+            </div>
+            <div class="hidden" id="ra-feedback-bucket">
+                <!-- <p>A message will appear here after speech recognition.</p> -->
+            </div>
+        </div>
+    </section>
+
+    <section id="LAPL">
+        <h2>LAPL Literacy Programs</h2>
+        <p>Learn more about literacy programs offered by the Los Angeles Public Library.</p>
+        <a href="https://www.lapl.org/literacy/learner" target="_blank">Visit LAPL Literacy Programs</a>
+    </section>
+</body>
+</html>

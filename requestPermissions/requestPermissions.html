@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!-- 
+   Name: Darleine Abellard
+   CS 141 SU 2025
+   Microphone Permissions for Reader's Aide Chrome Extension 
+   This is the webpage that pops up when asking for microphone permissions.
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="default-icon16.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Mic Permission</title>
+    <link rel="stylesheet" href="requestPermissions.css">
+    <script defer src="requestPermissions.js"></script>
+</head>
+<body>
+    <section>
+        <h1>Microphone Permission Required</h1>
+        <p>This extension needs microphone access to function properly.</p>
+        <p>Click the button below to grant permissions:</p>
+        <button id="requestBtn">Allow Microphone Access</button>
+        <div id="statusMessage"></div>
+    </section>
+</body>
+</html>

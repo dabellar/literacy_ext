@@ -1,0 +1,37 @@
+{
+    "name": "Reader's Aide",
+    "description": "A Chrome Extension to assist adults with low literacy in reading, pronouncing, and understanding text on web pages",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons": {
+        "16": "assets/default-icon16.png",
+        "32": "assets/default-icon32.png",
+        "128": "assets/default-icon128.png"
+    },
+    "permissions": [
+        "webRequest",
+        "sidePanel",
+        "webRequestAuthProvider",
+        "tts",
+        "contextMenus",
+        "contentSettings"
+    ],
+    "host_permissions": [
+        "https://api.dictionaryapi.dev/*"
+    ],
+        "content_scripts": [
+        {
+            "js": ["side_panel/content_script.js"],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "side_panel": {
+        "default_path": "side_panel/side_panel.html"
+    },
+    "action": {
+        "default_title": "Reader's Aide"
+    },
+    "background": {
+        "service_worker": "background.js"
+    }
+}

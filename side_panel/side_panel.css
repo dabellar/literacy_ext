@@ -1,0 +1,263 @@
+/* 
+    Name: Darleine Abellard
+    CS 141 SU 2025
+    Reader's Aide Chrome Extension
+    This is the layout style sheet for a reading helper chrome extension. 
+    It includes styles for the side panel elements.
+    
+    Color Palette:
+        - Headings: #6B3FA0 (accessible purple)
+        - Secondary: #5E4B8B (dusty purple)
+        - Accent: #8E6CA0 (soft lavender)
+        - Background: #F9F7FC (very light lavender)
+        - Text: #2D2A32 (near black with purple undertone)
+        - Success: #5D8A7A (accessible green with purple harmony)
+        - Warning: #9D6A77 (dusty rose/mauve)
+*/
+
+.hidden {
+    display: none;
+}
+
+html {
+    width: 372px;
+}
+
+/* General page styling */
+body {
+    font-family: "Quicksand", sans-serif;
+    background-color: #F9F7FC;
+    color: #2D2A32;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+    margin: 0px;
+}
+
+button:focus, input:focus {
+    outline: 2px solid #6b3fa0;
+    outline-offset: 2px;
+}
+
+h2 {
+    color: #5e4b8b;
+    font-size: 13.5pt;
+    margin-top: 0px;
+    margin-bottom: 12px;
+}
+
+/* Header styling */
+
+header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+}
+
+#header-bucket {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+h1 {
+    color: #6b3fa0;
+    font-size: 18pt;
+    margin: 0px;
+}
+
+#info-tooltip {
+    border-left: 4px solid #8e6ca0;
+    border-radius: 4px;
+    box-shadow: 0px 2px 8px #0000001a;
+    margin-top: 12px;
+    padding: 16px;
+}
+
+ol {
+    margin: 12px;
+    padding-left: 20px;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+#info-tooltip p {
+    font-style: italic;
+    margin: 0px;
+}
+
+/* #dict-select-wrapper {
+    margin-bottom: 12px;
+}
+
+select {
+    font-family: "Quicksand", sans-serif;
+    font-size: 10.5pt;
+    width: 170px;
+    transition: border-color 0.2s ease;
+}
+
+#dict-select:focus {
+    border-color: #6b3fa0;
+} */
+
+/* Section styling */
+section {
+    background-color: white;
+    border: 1px solid #e5ddf0; 
+    border-radius: 8px;
+    box-shadow: 0px 2px 4px rgba(107, 63, 160, 0.1);
+    margin-bottom: 16px;
+    padding: 20px;
+}
+
+section p {
+    color: #2D2A32;
+    font-size: 10.5pt;
+    margin: 0px 0px 16px;
+}
+
+#search-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+/* Inputs and buttons */
+input {
+    border: 1px solid #d5cce5;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 10.5pt;
+    padding: 10px 12px;
+    transition: border-color 0.2s ease;
+    width: 100%;
+}
+
+input:focus {
+    border-color: #6b3fa0;
+}
+
+button {
+    background-color: #6b3fa0;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-size: 10.5pt;
+    font-weight: 600;
+    padding: 10px 16px;
+    transition: background-color 0.2s ease;
+}
+
+button:hover {
+    background-color: #5e4b8b;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+#infoBtn {
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    padding: 0px;
+    border: none;
+    color: #f9f7fc;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+/*  Result area styling */
+#ra-result {
+    margin-top: 16px;
+}
+
+.ra-definition {
+    background-color: #f5f1fa;
+    border-left: 3px solid #8e6ca0;
+    border-radius: 4px;
+    font-size: 10.5pt;
+    margin-bottom: 12px;
+    padding: 12px;
+}
+
+.ra-definition span {
+    color: #5e4b8b;
+    font-weight: 600;
+}
+
+.pronunciation-controls {
+    display: flex;
+    gap: 12px;
+    margin: 16px 0;
+}
+
+#ra-speakBtn,
+#ra-practiceBtn {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 8px;
+}
+
+button img {
+    height: 20px;
+    width: 20px;
+}
+
+/* Feedback area styling */
+#ra-feedback-bucket {
+    background-color: #f5f1fa;
+    border-radius: 6px;
+    font-size: 10.5pt;
+    margin-top: 12px;
+    padding: 12px;
+}
+
+#ra-feedback-bucket p {
+    margin: 0;
+}
+
+/* LAPL section styling */
+#LAPL a {
+    background-color: #6b3fa0;
+    border-radius: 6px;
+    color: white;
+    display: inline-block;
+    font-weight: 600;
+    margin-top: 8px;
+    padding: 10px 16px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+#LAPL a:hover {
+    background-color: #5e4b8b;
+}
+
+/* Recording state styling */
+.recording {
+    background-color: #a42d49 !important;
+}
+
+.recording-indicator {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

@@ -8,3 +8,6 @@ In the summer term of 2024-2025, I took CS 141, a computer science project cours
 
 ### How to install the extension
 After cloning this repository, use this Chrome for Developers [guide](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked) to install the extension. 
+
+### Source/Credits 
+Data from [Merriam Webster API](https://dictionaryapi.com/products/api-intermediate-dictionary)

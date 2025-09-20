@@ -15,11 +15,11 @@ let global = {
   PERMISSION_TAB_ID: null,
   // Uncomment one of the following pairs to set a default dictionary
   // elementary dictionary
-  // MERRIAM_API_URL: "https://www.dictionaryapi.com/api/v3/references/sd2/json/",
-  // MERRIAM_API_KEY: "a2c78f74-c5a2-4e4f-9ea3-f5dc1d0f2f86",
+  // URL: "https://www.dictionaryapi.com/api/v3/references/sd2/json/",
+  // KEY: "a2c78f74-c5a2-4e4f-9ea3-f5dc1d0f2f86",
   // intermediate dictionary
-  MERRIAM_API_URL: "https://www.dictionaryapi.com/api/v3/references/sd3/json/",
-  MERRIAM_API_KEY: "af806ea0-a4e2-455a-af67-fee4e96849f0"
+  URL: "https://www.dictionaryapi.com/api/v3/references/sd3/json/",
+  KEY: "af806ea0-a4e2-455a-af67-fee4e96849f0"
 };
 
 /**
@@ -136,7 +136,7 @@ chrome.tabs.onRemoved.addListener((tabId) => {
 async function fetchDefinition(word) {
   try {
     word = word.toLowerCase();
-    let response = await fetch(`${global.MERRIAM_API_URL}${word}?key=${global.MERRIAM_API_KEY}`);
+    let response = await fetch(`${global.URL}${word}?key=${global.KEY}`);
     let data = await response.json();
     let result = {};
     let tryList = [];
